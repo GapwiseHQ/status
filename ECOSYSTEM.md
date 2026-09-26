@@ -20,10 +20,10 @@
 
 ## Current developer-platform release facts
 
-- TypeScript `@gapwise/sdk@0.1.1` is canonically published on both npm and JSR with provenance through trusted GitHub Actions publishing.
+- TypeScript `@gapwise/sdk@0.1.2` is canonically published on both npm and JSR with provenance through trusted GitHub Actions publishing.
 - The same JavaScript/TypeScript SDK is mirrored publicly on GitHub Packages as `@gapwisehq/sdk` (historical 0.1.1 under `@gapwise-for-uoft/sdk`); the organization-scoped name is required by GitHub Packages and does not replace the canonical npm/JSR identity.
 - Node, Bun, and Deno are runtime targets for the same TypeScript implementation, not separately monitored SDK products.
-- Python `gapwise==0.1.0` is published on PyPI through Trusted Publishing.
+- Python `gapwise==0.1.1` is published on PyPI through Trusted Publishing.
 - TypeScript and Python are equal first-party SDK implementations of the same public API v1 semantics.
 
 Registry publication is release metadata, not service health. Native repository/build/app-store state is also release metadata unless a meaningful health contract can be probed. Availability reporting should focus on public endpoints and operator-confirmable service state.

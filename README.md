@@ -68,10 +68,10 @@ Gapwise's public developer surface is versioned at `https://api.gapwise.ca/v1` w
 Current first-party SDK releases:
 
 ```bash
-npm install @gapwise/sdk@0.1.1
-# JSR: @gapwise/sdk@0.1.1
+npm install @gapwise/sdk@0.1.2
+# JSR: @gapwise/sdk@0.1.2
 # GitHub Packages mirror: @gapwisehq/sdk (historical 0.1.1 under @gapwise-for-uoft/sdk)
-python -m pip install gapwise==0.1.0
+python -m pip install gapwise==0.1.1
 ```
 
 The JavaScript/TypeScript SDK is canonically published as `@gapwise/sdk` on npm and JSR and mirrored on GitHub Packages as `@gapwisehq/sdk` (historical 0.1.1 under `@gapwise-for-uoft/sdk`); the Python SDK is published on PyPI. Registry availability is a developer-platform release fact, not a substitute for live API/service monitoring.

@@ -25,7 +25,7 @@
 
 Gapwise Status is the independent operational-health surface for **Gapwise**, a privacy-first timetable and campus-intelligence platform for university students across Canada, created and engineered by **Andrew Muratov**.
 
-The seven first-party product repositories cover the web/PWA and developer platform, native Android and iOS clients, permissioned AI/MCP, canonical multi-university campus data, developer documentation, and this separately deployed status service.
+The first-party product repositories cover the web/PWA and developer platform, native Android and iOS clients, permissioned AI/MCP, canonical multi-university campus data, developer documentation, CLI tooling, and this separately deployed status service.
 
 Status is deliberately deployed independently from the main app and developer docs so a failure in those surfaces does not automatically remove the place used to communicate service health.
 
@@ -53,7 +53,7 @@ Key behavior:
 - service-state transitions are retained for the public history view;
 - current state and history use GitHub-backed state with safe fallbacks;
 - a failure to load status data is not itself presented as proof that the entire Gapwise ecosystem is down;
-- external university systems (U of T, Carleton, TMU, Queen's, Laurier, York, McMaster, Western, Guelph, uOttawa, Brock, UBC) and other upstream dependencies remain outside Gapwise's control.
+- external university systems (U of T, Carleton, TMU, Queen's, Laurier, York, McMaster, Western, Guelph, uOttawa, Brock, UBC, and Waterloo) and other upstream dependencies remain outside Gapwise's control.
 
 Public routes include `/` for current state, `/history/` for recorded transitions/incidents, `/_data/current`, and `/_data/history`.
 
@@ -90,7 +90,7 @@ The JavaScript/TypeScript SDK is canonically published as `@gapwise/sdk` on npm 
 | **[`docs`](https://github.com/GapwiseHQ/docs)** | Canonical public developer documentation | [docs.gapwise.ca](https://docs.gapwise.ca) |
 | **[`status`](https://github.com/GapwiseHQ/status)** | **Independent service-health monitoring and incident communication** | [status.gapwise.ca](https://status.gapwise.ca) |
 
-`status` owns operational communication, not product semantics. The main `gapwise` repository remains authoritative for deterministic timetable, routing, gap, public API, SDK, and student-state behavior; `data` owns public University of Toronto campus facts.
+`status` owns operational communication, not product semantics. The main `gapwise` repository remains authoritative for deterministic timetable, routing, gap, public API, SDK, and student-state behavior; `data` owns public multi-university campus facts.
 
 ---
 
@@ -113,7 +113,7 @@ npm run dev
 
 ## Independent project
 
-> **Gapwise is an independent student software project created by Andrew Muratov. It is not affiliated with, endorsed by, or an official service of the University of Toronto, Carleton University, Toronto Metropolitan University, Queen's University, Wilfrid Laurier University, York University, or McMaster University.**
+> **Gapwise is an independent student software project created by Andrew Muratov. It is not affiliated with, endorsed by, or an official service of any supported university.**
 
 Original status-site code and documentation are available under the [MIT License](LICENSE).
 

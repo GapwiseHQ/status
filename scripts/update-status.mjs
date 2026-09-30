@@ -27,6 +27,7 @@ const automaticChecks = new Map([
   ["uottawa", { url: "https://uottawa.gapwise.ca/", expected: (status) => status >= 200 && status < 400 }],
   ["brock", { url: "https://brock.gapwise.ca/", expected: (status) => status >= 200 && status < 400 }],
   ["ubc", { url: "https://ubc.gapwise.ca/", expected: (status) => status >= 200 && status < 400 }],
+  ["waterloo", { url: "https://waterloo.gapwise.ca/", expected: (status) => status >= 200 && status < 400 }],
 ]);
 
 const canonicalAutomaticServices = [
@@ -180,6 +181,19 @@ const canonicalAutomaticServices = [
       id: "ubc",
       name: "University of British Columbia",
       url: "https://ubc.gapwise.ca/",
+      status: "unknown",
+      monitoring: "automatic",
+      checkedAt: null,
+      detail: "Awaiting first automatic probe",
+    },
+  },
+  {
+    groupId: "universities",
+    groupName: "University editions",
+    service: {
+      id: "waterloo",
+      name: "University of Waterloo",
+      url: "https://waterloo.gapwise.ca/",
       status: "unknown",
       monitoring: "automatic",
       checkedAt: null,

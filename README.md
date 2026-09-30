@@ -53,7 +53,7 @@ Key behavior:
 - service-state transitions are retained for the public history view;
 - current state and history use GitHub-backed state with safe fallbacks;
 - a failure to load status data is not itself presented as proof that the entire Gapwise ecosystem is down;
-- external university systems (U of T, Carleton, TMU, Queen's, Laurier, York, McMaster, Western, Guelph, uOttawa, Brock) and other upstream dependencies remain outside Gapwise's control.
+- external university systems (U of T, Carleton, TMU, Queen's, Laurier, York, McMaster, Western, Guelph, uOttawa, Brock, UBC) and other upstream dependencies remain outside Gapwise's control.
 
 Public routes include `/` for current state, `/history/` for recorded transitions/incidents, `/_data/current`, and `/_data/history`.
 

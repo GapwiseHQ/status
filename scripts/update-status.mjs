@@ -43,6 +43,7 @@ const automaticChecks = new Map([
   ["princeton", { url: "https://princeton.gapwise.ca/", expected: (status) => status >= 200 && status < 400 }],
   ["yale", { url: "https://yale.gapwise.ca/", expected: (status) => status >= 200 && status < 400 }],
   ["harvard", { url: "https://harvard.gapwise.ca/", expected: (status) => status >= 200 && status < 400 }],
+  ["sorbonne", { url: "https://sorbonne.gapwise.ca/", expected: (status) => status >= 200 && status < 400 }],
 ]);
 
 const canonicalAutomaticServices = [
@@ -404,6 +405,19 @@ const canonicalAutomaticServices = [
       id: "harvard",
       name: "Harvard University",
       url: "https://harvard.gapwise.ca/",
+      status: "unknown",
+      monitoring: "automatic",
+      checkedAt: null,
+      detail: "Awaiting first automatic probe",
+    },
+  },
+  {
+    groupId: "universities",
+    groupName: "University editions",
+    service: {
+      id: "sorbonne",
+      name: "Sorbonne Université",
+      url: "https://sorbonne.gapwise.ca/",
       status: "unknown",
       monitoring: "automatic",
       checkedAt: null,

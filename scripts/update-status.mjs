@@ -1,3 +1,5 @@
+import { refreshAutomaticServices } from "./refresh-automatic-services.mjs";
+
 const [owner, repo] = String(process.env.GITHUB_REPOSITORY || "GapwiseHQ/status").split("/");
 if (!owner || !repo) throw new Error("GITHUB_REPOSITORY must be in owner/repo form.");
 const issueNumber = Number(process.env.STATUS_ISSUE_NUMBER || "1");
@@ -617,23 +619,7 @@ next.version = 1;
 next.generatedAt = now;
 ensureCanonicalServices(next);
 
-for (const group of next.groups || []) {
-  for (const service of group.services || []) {
-    if (service.monitoring !== "automatic") continue;
-    const check = automaticChecks.get(service.id);
-    if (!check) {
-      service.status = "unknown";
-      service.detail = "No automated probe is configured";
-      service.checkedAt = now;
-      continue;
-    }
-    const result = await probeService(check);
-    service.url = check.url;
-    service.status = result.status;
-    service.detail = result.detail;
-    service.checkedAt = now;
-  }
-}
+await refreshAutomaticServices(next.groups || [], automaticChecks, probeService, now);
 
 next.summary = summaryFor(next);
 

@@ -12,10 +12,11 @@
     "url": "https://github.com/GapwiseHQ/status/issues"
   },
   "scripts": {
+    "test": "node --test tests/*.test.mjs",
     "dev": "astro dev",
     "build": "npm run verify:status-scripts && astro build",
     "preview": "astro preview",
-    "check": "npm run verify:status-scripts && astro check",
+    "check": "npm run verify:status-scripts && npm test && astro check",
     "verify:status-scripts": "node --check scripts/update-status.mjs && node --check scripts/enrich-gapwise-health.mjs && node --check scripts/set-manual-status.mjs"
   },
   "dependencies": {
